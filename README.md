@@ -15,6 +15,7 @@ Here the list of the available subtrees:
 Each *precommand* is executed before the actual git command. Any other git command that does not have a pre-command will be executed as usual.
 
 - **commit**: store a list of subtree involved in the commit. The list is stored in a file having as name the branch name. Multiple commits will extend the list, if needed.
+
 ```bash
 > wgit commit -m "chore: added v"
 Checking for changes in subtrees...
@@ -26,6 +27,8 @@ Stored them in /home/deg/.local/share/wgit/banana_to_push.txt.
 ```
 
 - **push**: push the changes to the subtree retrieved from the file generated in the `pre-commit` function.
+
+
 ```bash 
 wgit push
 Start pushing changes to subtrees...
@@ -45,6 +48,7 @@ To ...
 ```
 
 - **pull**: pull the changes from all the available subtrees.
+
 ```bash
 > wgit pull
 Changes pulled from subtree 'A'.
